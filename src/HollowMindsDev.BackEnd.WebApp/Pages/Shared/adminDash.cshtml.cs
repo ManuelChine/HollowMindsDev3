@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HollowMindsDev.BackEnd.WebApp.Pages.Shared.mainDashBoard
+namespace HollowMindsDev.BackEnd.WebApp.Pages.Shared
 {
     public class adminDashModel : PageModel
     {

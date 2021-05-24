@@ -10,6 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\silosBg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.4" />
@@ -24,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HollowMindsDev.BackEnd.API\HollowMindsDev.BackEnd.API.csproj" />
     <ProjectReference Include="..\HollowMindsDev.BackEnd.ApplicationCore\HollowMindsDev.BackEnd.ApplicationCore.csproj" />
     <ProjectReference Include="..\HollowMindsDev.BackEnd.Infrastructure\HollowMindsDev.BackEnd.Infrastructure.csproj" />
     <ProjectReference Include="..\HollowMindsDev.BackEnd.Services\HollowMindsDev.BackEnd.Services.csproj" />
