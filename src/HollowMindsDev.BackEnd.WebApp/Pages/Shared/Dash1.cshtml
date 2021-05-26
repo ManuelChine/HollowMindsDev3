@@ -31,14 +31,14 @@
 
     <!--QUI CI SONO LE VARIABILI DEI SILOS CHE POI ANDRANNO CAMBIATE-->
     <script>
-        var pressione=78
-        var temperatura=56;
-        var densita=56;
-        var YearProd=2015;
-        var Capacity = 500;
-        var Diameter =67;
-        var High =3456;
-        var Locatio = 'Israele';
+        var pressione = @Model.Last[0].Limit.Pressure;
+        var temperatura = @Model.Last[0].Limit.Temperature;
+        var densita = @Model.Last[0].Measurement.Density;
+        var YearProd = @Model.Last[0].Silo.YearProd;
+        var Capacity = @Model.Last[0].Silo.Capacity;
+        var Diameter = @Model.Last[0].Silo.Diameter;
+        var High =@Model.Last[0].Silo.Height;
+        var Locatio = @Model.Last[0].Silo.Location;
     </script>
     <div class="container" style="color: white;">
         <div class="container">
@@ -47,7 +47,7 @@
                     <h1>Livello Silo</h1>
                     <script>
 
-                silos = new Array(sens1=true, sens2=true,sens3=true ,sens4=false ,sens5=false,sens6=false,sens7=false,sens8=false);
+                silos = new Array(sens0 = @Model.Last[0].Measurement.Sensor0, sens1 = @Model.Last[0].Measurement.Sensor1, sens2 = @Model.Last[0].Measurement.Sensor2, sens3 = @Model.Last[0].Measurement.Sensor3, sens4 = @Model.Last[0].Measurement.Sensor4, sens5 = @Model.Last[0].Measurement.Sensor5, sens6 = @Model.Last[0].Measurement.Sensor6, sens7 = @Model.Last[0].Measurement.Sensor7);
 
                 document.write(
                         '<div class="cont">',
@@ -112,5 +112,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

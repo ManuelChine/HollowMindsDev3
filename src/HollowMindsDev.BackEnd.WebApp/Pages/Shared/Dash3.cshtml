@@ -31,14 +31,14 @@
 
     <!--QUI CI SONO LE VARIABILI DEI SILOS CHE POI ANDRANNO CAMBIATE-->
     <script>
-        var pressione=78
-        var temperatura=56;
-        var densita=56;
-        var YearProd=2015;
-        var Capacity = 500;
-        var Diameter =67;
-        var High =3456;
-        var Locatio = 'Israele';
+        var pressione = @Model.Last[2].Limit.Pressure;
+        var temperatura = @Model.Last[2].Limit.Temperature;
+        var densita = @Model.Last[2].Measurement.Density;
+        var YearProd = @Model.Last[2].Silo.YearProd;
+        var Capacity = @Model.Last[2].Silo.Capacity;
+        var Diameter = @Model.Last[2].Silo.Diameter;
+        var High =@Model.Last[2].Silo.Height;
+        var Locatio = @Model.Last[2].Silo.Location;
     </script>
     <div class="container" style="color: white;">
         <div class="container">
@@ -47,10 +47,10 @@
                     <h1>Livello Silo</h1>
                     <script>
 
-                silos = new Array(sens1=true, sens2=true,sens3=true ,sens4=false ,sens5=false,sens6=false,sens7=false,sens8=false);
+                         silos = new Array(sens0 = @Model.Last[2].Measurement.Sensor0, sens1 = @Model.Last[2].Measurement.Sensor1, sens2 = @Model.Last[2].Measurement.Sensor2, sens3 = @Model.Last[2].Measurement.Sensor3, sens4 = @Model.Last[2].Measurement.Sensor4, sens5 = @Model.Last[2].Measurement.Sensor5, sens6 = @Model.Last[2].Measurement.Sensor6, sens7 = @Model.Last[2].Measurement.Sensor7);
 
-                document.write(
-                        '<div class="cont">',
+                        document.write(
+                            '<div class="cont">',
                             '<div style="width: 200px; height:50px;border-style:solid; border-color:#CCCCCC; border-width:1px; text-align:center; line-height:45px;" id="8">Level 7</div>',
                             '<div style="width: 200px; height:50px;border-style:solid; border-color:#CCCCCC; border-width:1px; text-align:center; line-height:45px;" id="7">Level 6</div>',
                             '<div style="width: 200px; height:50px;border-style:solid; border-color:#CCCCCC; border-width:1px; text-align:center; line-height:45px;" id="6">Level 5</div>',
@@ -59,21 +59,21 @@
                             '<div style="width: 200px; height:50px;border-style:solid; border-color:#CCCCCC; border-width:1px; text-align:center; line-height:45px;" id="3">Level 2</div>',
                             '<div style="width: 200px; height:50px;border-style:solid; border-color:#CCCCCC; border-width:1px; text-align:center; line-height:45px;" id="2">Level 1</div>',
                             '<div style="width: 200px; height:50px;border-style:solid; border-color:#CCCCCC; border-width:1px; text-align:center; line-height:45px;" id="1">Level 0</div>',
-                        '</div>'
-                  );
+                            '</div>'
+                        );
 
-                var cont=0;
+                        var cont = 0;
 
-                for(var i=0;i<8;i++){
-                    cont++;
-                    if(silos[i]==true){
-                        var a = document.getElementById(cont);
-                        a.style.backgroundColor="green";
-                    }else{
-                        var a = document.getElementById(cont);
-                        a.style.backgroundColor="red";
-                    }
-                }
+                        for (var i = 0; i < 8; i++) {
+                            cont++;
+                            if (silos[i] == true) {
+                                var a = document.getElementById(cont);
+                                a.style.backgroundColor = "green";
+                            } else {
+                                var a = document.getElementById(cont);
+                                a.style.backgroundColor = "red";
+                            }
+                        }
                     </script>
                 </div>
                 <div class="col" style="text-align: center; margin: 15px; background-color: rgb(44, 172, 172);">
@@ -112,5 +112,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
