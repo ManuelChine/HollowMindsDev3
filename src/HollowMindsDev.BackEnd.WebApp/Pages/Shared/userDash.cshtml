@@ -49,7 +49,7 @@
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash1")" target="_blank">Silos 1</a></h3>
                 <script>
 
-                    silos1 = new Array(sens1 = true, sens2 = true, sens3 = true, sens4 = false, sens5 = false, sens6 = false, sens7 = false, sens8 = false);
+                    silos1 = new Array(sens0 = @Model.Last[0].Sensor0, sens1 = @Model.Last[0].Sensor1, sens2 = @Model.Last[0].Sensor2, sens3 = @Model.Last[0].Sensor3, sens4 = @Model.Last[0].Sensor4, sens5 = @Model.Last[0].Sensor5, sens6 = @Model.Last[0].Sensor6, sens7 = @Model.Last[0].Sensor7);
 
                     document.write(
                         '<div class="silos1">',
@@ -83,7 +83,7 @@
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash2")" target="_blank">Silos 2</a></h3>
                 <script>
 
-                    silos2 = new Array(sens1 = true, sens2 = true, sens3 = false, sens4 = false, sens5 = false, sens6 = false, sens7 = false, sens8 = false);
+                    silos2 = new Array(sens0 = @Model.Last[1].Sensor0, sens1 = @Model.Last[1].Sensor1, sens2 = @Model.Last[1].Sensor2, sens3 = @Model.Last[1].Sensor3, sens4 = @Model.Last[1].Sensor4, sens5 = @Model.Last[1].Sensor5, sens6 = @Model.Last[1].Sensor6, sens7 = @Model.Last[1].Sensor7);
 
                     document.write(
                         '<div class="silos2">',
@@ -117,7 +117,7 @@
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash3")" target="_blank">Silos 3</a></h3>
                 <script>
 
-                    silos3 = new Array(sens1 = true, sens2 = true, sens3 = true, sens4 = true, sens5 = true, sens6 = true, sens7 = false, sens8 = false);
+                    silos3 = new Array(sens0 = @Model.Last[2].Sensor0, sens1 = @Model.Last[2].Sensor1, sens2 = @Model.Last[2].Sensor2, sens3 = @Model.Last[2].Sensor3, sens4 = @Model.Last[2].Sensor4, sens5 = @Model.Last[2].Sensor5, sens6 = @Model.Last[2].Sensor6, sens7 = @Model.Last[2].Sensor7);
 
                     document.write(
                         '<div class="silos3">',
@@ -151,7 +151,7 @@
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash4")" target="_blank">Silos 4</a></h3>
                 <script>
 
-                    silos4 = new Array(sens1 = true, sens2 = false, sens3 = false, sens4 = false, sens5 = false, sens6 = false, sens7 = false, sens8 = false);
+                    silos4 = new Array(sens0 = @Model.Last[3].Sensor0, sens1 = @Model.Last[3].Sensor1, sens2 = @Model.Last[3].Sensor2, sens3 = @Model.Last[3].Sensor3, sens4 = @Model.Last[3].Sensor4, sens5 = @Model.Last[3].Sensor5, sens6 = @Model.Last[3].Sensor6, sens7 = @Model.Last[3].Sensor7);
 
                     document.write(
                         '<div class="silos4">',
@@ -190,7 +190,7 @@
                         <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash5")" target="_blank">Silos 5</a></h3>
                         <script>
 
-                        silos5 = new Array(sens1 = true, sens2 = true, sens3 = true, sens4 = true, sens5 = true, sens6 = true, sens7 = true, sens8 = true);
+                        silos5 = new Array(sens0 = @Model.Last[4].Sensor0, sens1 = @Model.Last[4].Sensor1, sens2 = @Model.Last[4].Sensor2, sens3 = @Model.Last[4].Sensor3, sens4 = @Model.Last[4].Sensor4, sens5 = @Model.Last[4].Sensor5, sens6 = @Model.Last[4].Sensor6, sens7 = @Model.Last[4].Sensor7);
 
                         document.write(
                             '<div class="silos5">',
@@ -224,7 +224,7 @@
                         <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash6")" target="_blank">Silos 6</a></h3>
                         <script>
 
-                        silos6 = new Array(sens1 = true, sens2 = true, sens3 = true, sens4 = true, sens5 = false, sens6 = false, sens7 = false, sens8 = false);
+                        silos6 = new Array(sens0 = @Model.Last[5].Sensor0, sens1 = @Model.Last[5].Sensor1, sens2 = @Model.Last[5].Sensor2, sens3 = @Model.Last[5].Sensor3, sens4 = @Model.Last[5].Sensor4, sens5 = @Model.Last[5].Sensor5, sens6 = @Model.Last[5].Sensor6, sens7 = @Model.Last[5].Sensor7);
 
                         document.write(
                             '<div class="silos6">',
@@ -258,7 +258,7 @@
                         <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash7")" target="_blank">Silos 7</a></h3>
                         <script>
 
-                        silos7 = new Array(sens1 = true, sens2 = true, sens3 = true, sens4 = true, sens5 = true, sens6 = true, sens7 = false, sens8 = false);
+                        silos7 = new Array(sens0 = @Model.Last[6].Sensor0, sens1 = @Model.Last[6].Sensor1, sens2 = @Model.Last[6].Sensor2, sens3 = @Model.Last[6].Sensor3, sens4 = @Model.Last[6].Sensor4, sens5 = @Model.Last[6].Sensor5, sens6 = @Model.Last[6].Sensor6, sens7 = @Model.Last[6].Sensor7);
 
                         document.write(
                             '<div class="silos7">',
@@ -288,5 +288,9 @@
                         </script>
                     </div>                 
                 </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
