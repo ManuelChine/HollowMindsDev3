@@ -17,11 +17,9 @@ namespace HollowMindsDev.BackEnd.WebApp.Pages.Shared
         {
             _limitService = limitService;
         }
-        public Limit Limit { get; set; }
 
         public void OnPostSubmit(Limit limit)
         {
-
             _limitService.InsertLimit(limit);
         }
     }

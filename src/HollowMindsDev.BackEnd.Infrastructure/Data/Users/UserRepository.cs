@@ -77,8 +77,8 @@ AND mail = @mail;";
         public void Insert(User model)
         {
             const string query = @"
-INSERT INTO user (idUser, mail, password, isAdmin, name, surname)
-VALUES (@IdUser, @Mail, @Password, @IsAdmin, @Name, @Surname);";
+INSERT INTO user (mail, password, isAdmin, name, surname)
+VALUES (@Mail, @Password, @IsAdmin, @Name, @Surname);";
             using var connection = new MySqlConnection(_connectionString);
             connection.Execute(query, model);
         }

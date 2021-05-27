@@ -9,12 +9,10 @@ namespace HollowMindsDev.BackEnd.ApplicationCore.Entities.Users
 {
     public class User: Entity<int>
     {
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
         [Required]
         [StringLength(100)]
         public string Name { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z'\s]*$")]
         [Required]
         [StringLength(100)]
         public string Surname { get; set; }
@@ -25,8 +23,11 @@ namespace HollowMindsDev.BackEnd.ApplicationCore.Entities.Users
 
         [Required]
         [StringLength(100)]
-
         public string Password { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string PassworRep { get; set; }
 
         [Required]
         [Range(0, 1)]
