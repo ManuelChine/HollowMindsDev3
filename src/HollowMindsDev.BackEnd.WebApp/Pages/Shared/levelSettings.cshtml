@@ -24,34 +24,18 @@
         <div class="card bg-light">
             <article class="card-body mx-auto" style="max-width: 400px;">
                 <h4 class="card-title mt-3 text-center">Level Settings</h4>
-                <form>
-
-                    <!--
+                <form method="post">
                     <div class="form-group input-group">
-                        <select class="custom-select">
-                            <option selected="">Select Silos</option>
-                            <option value="1">Silos 1</option>
-                            <option value="2">Silos 2</option>
-                            <option value="3">Silos 3</option>
-                            <option value="4">Silos 4</option>
-                            <option value="5">Silos 5</option>
-                            <option value="6">Silos 6</option>
-                            <option value="7">Silos 7</option>
-                        </select>
-                    </div>
-                    -->
-                    
-                    <div class="form-group input-group">
-                        <input type="number" name="" id="temp" class="form-control" placeholder="Temperature">
+                        <input type="number" name="Temperature" id="temp" class="form-control" placeholder="Temperature">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
-                        <input name="" id="Hum" class="form-control" placeholder="Humidity" type="number">
+                        <input name="Umidity" id="Hum" class="form-control" placeholder="Humidity" type="number">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
-                        <input name="" id="press" class="form-control" placeholder="Pressure" type="number">
+                        <input name="Pressure" id="press" class="form-control" placeholder="Pressure" type="number">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
-                        <select class="custom-select">
+                        <select name="LevelMax" class="custom-select">
                             <option selected="">Level Max</option>
                             <option value="1">0</option>
                             <option value="2">1</option>
@@ -65,7 +49,7 @@
 
                     </div>
                     <div class="form-group input-group">
-                        <select class="custom-select">
+                        <select name="LevelMin" class="custom-select">
                             <option selected="">Level Min</option>
                             <option value="1">0</option>
                             <option value="2">1</option>
@@ -79,9 +63,10 @@
 
                     </div>
                     <div class="form-group input-group">
-                        <input class="form-control" placeholder="Material" type="text">
+                        <input name="Material" class="form-control" placeholder="Material" type="text">
                     </div> <!-- form-group// -->
-
+                    <input type="submit" class="btn btn-primary btn-lg" value="Confirm" asp-page-handler="Submit">
+                    <input type="reset" class="btn btn-secondary btn-lg" value="Reset">
 
                 </form>
             </article>
