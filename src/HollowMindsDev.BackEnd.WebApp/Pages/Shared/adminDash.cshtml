@@ -25,22 +25,40 @@
 
 <body>
     <div class="container">
+
         <div class="row" style="color:white">
             <div class="col-12">
                 <h1 style="color: white; text-align: center; margin-top:20px; margin-bottom:50px;">Admin Silos Control Panel</h1>
             </div>
+
+            @for (int i = 0; i < Model.Allert.Count; i++)
+            {
+                if (Model.Allert[i].Type == "ALLARM")
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <h6>@Model.Allert[i].Type</h6>
+                        <p>@Model.Allert[i].Body </p>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-warning" role="alert">
+                        <h6>@Model.Allert[i].Type</h6>
+                        <p>@Model.Allert[i].Body </p>
+                    </div>
+                }
+            }
+
             <div>
                 <a href="@Url.Page("addUser")" class="btn">Add User</a>
                 <a href="@Url.Page("levelSettings")" class="btn">Level Settings</a>
             </div>
-
         </div>
 
-
-    <div class="row" style="color:white">
-        <div class="col-sm">
-            <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash1")" target="_blank">Silos 1</a></h3>
-            <script>
+        <div class="row" style="color:white">
+            <div class="col-sm">
+                <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash1")" target="_blank">Silos 1</a></h3>
+                <script>
 
                     silos1 = new Array(sens0 = @Model.Last[0].Sensor0, sens1 = @Model.Last[0].Sensor1, sens2 = @Model.Last[0].Sensor2, sens3 = @Model.Last[0].Sensor3, sens4 = @Model.Last[0].Sensor4, sens5 = @Model.Last[0].Sensor5, sens6 = @Model.Last[0].Sensor6, sens7 = @Model.Last[0].Sensor7);
 
@@ -69,8 +87,8 @@
                             a.style.backgroundColor = "red";
                         }
                     }
-            </script>
-        </div>
+                </script>
+            </div>
 
             <div class="col-sm">
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash2")" target="_blank">Silos 2</a></h3>
@@ -139,9 +157,9 @@
                     }
                 </script>
             </div>
-        
 
-        
+
+
             <div class="col-sm">
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash4")" target="_blank">Silos 4</a></h3>
                 <script>
@@ -173,7 +191,7 @@
                     }
                 </script>
             </div>
-        
+
             <div class="container">
                 <div class="row" style="color:white">
                     <div class="col-12">
@@ -286,7 +304,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 </body>
 
 </html>

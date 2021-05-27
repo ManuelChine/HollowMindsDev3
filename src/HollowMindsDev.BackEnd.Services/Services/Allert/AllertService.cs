@@ -52,39 +52,39 @@ namespace HollowMindsDev.BackEnd.Services.Services.Allert
                 //temperatureTop
                 if (AllertParameters[i].Measurement.TemperatureTop > (AllertParameters[i].Limit.Temperature * _warning / 100) + AllertParameters[i].Limit.Temperature)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the top by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the top by +{_warning}%" });
                 }
                 else if (AllertParameters[i].Measurement.TemperatureTop < AllertParameters[i].Limit.Temperature * (100 - _warning) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the top by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the top by +{_warning}%" });
                 }
 
                 if (AllertParameters[i].Measurement.TemperatureTop > (AllertParameters[i].Limit.Temperature * _allarm / 100) + AllertParameters[i].Limit.Temperature)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the top by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the top by -{_allarm}%" });
                 }
                 else if (AllertParameters[i].Measurement.TemperatureTop < AllertParameters[i].Limit.Temperature * (100 - _allarm) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the top by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the top by -{_allarm}%" });
                 }
 
                 //temperatureBottom
                 if (AllertParameters[i].Measurement.TemperatureBottom > (AllertParameters[i].Limit.Temperature * _warning / 100) + AllertParameters[i].Limit.Temperature)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the bottom by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the bottom by +{_warning}%" });
                 }
                 else if (AllertParameters[i].Measurement.TemperatureBottom < AllertParameters[i].Limit.Temperature * (100 - _warning) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the bottom by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the bottom by +{_warning}%" });
                 }
 
                 if (AllertParameters[i].Measurement.TemperatureBottom > (AllertParameters[i].Limit.Temperature * _allarm / 100) + AllertParameters[i].Limit.Temperature)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the bottom by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum temperature limit at the bottom by -{_allarm}%" });
                 }
                 else if (AllertParameters[i].Measurement.TemperatureBottom < AllertParameters[i].Limit.Temperature * (100 - _allarm) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the bottom by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum temperature limit at the bottom by -{_allarm}%" });
                 }
 
 
@@ -96,20 +96,20 @@ namespace HollowMindsDev.BackEnd.Services.Services.Allert
                 //Pressure
                 if (AllertParameters[i].Measurement.Pressure > (AllertParameters[i].Limit.Pressure * _warning / 100) + AllertParameters[i].Limit.Pressure)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum Pressure limit by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum Pressure limit by +{_warning}%" });
                 }
                 else if (AllertParameters[i].Measurement.Pressure < AllertParameters[i].Limit.Pressure * (100 - _warning) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum Pressure limit by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum Pressure limit by +{_warning}%" });
                 }
 
                 if (AllertParameters[i].Measurement.Pressure > (AllertParameters[i].Limit.Pressure * _allarm / 100) + AllertParameters[i].Limit.Pressure)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum Pressure limit by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum Pressure limit by -{_allarm}%" });
                 }
                 else if (AllertParameters[i].Measurement.Pressure < AllertParameters[i].Limit.Pressure * (100 - _allarm) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum Pressure limit by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum Pressure limit by -{_allarm}%" });
                 }
 
 
@@ -123,39 +123,39 @@ namespace HollowMindsDev.BackEnd.Services.Services.Allert
                 //umidityTop
                 if (AllertParameters[i].Measurement.UmidityTop > (AllertParameters[i].Limit.Umidity * _warning / 100) + AllertParameters[i].Limit.Umidity)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the top by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the top by +{_warning}%" });
                 }
                 else if (AllertParameters[i].Measurement.UmidityTop < AllertParameters[i].Limit.Umidity * (100 - _warning) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the top by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the top by +{_warning}%" });
                 }
 
                 if (AllertParameters[i].Measurement.UmidityTop > (AllertParameters[i].Limit.Umidity * _allarm / 100) + AllertParameters[i].Limit.Umidity)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the top by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the top by -{_allarm}%" });
                 }
                 else if (AllertParameters[i].Measurement.UmidityTop < AllertParameters[i].Limit.Umidity * (100 - _allarm) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the top by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the top by -{_allarm}%" });
                 }
 
                 //umidityBottom
                 if (AllertParameters[i].Measurement.UmidityBottom > (AllertParameters[i].Limit.Umidity * _warning / 100) + AllertParameters[i].Limit.Umidity)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the bottom by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the bottom by +{_warning}%" });
                 }
                 else if (AllertParameters[i].Measurement.UmidityBottom < AllertParameters[i].Limit.Umidity * (100 - _warning) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the bottom by +{_warning}%" });
+                    AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the bottom by +{_warning}%" });
                 }
 
                 if (AllertParameters[i].Measurement.UmidityBottom > (AllertParameters[i].Limit.Umidity * _allarm / 100) + AllertParameters[i].Limit.Umidity)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the bottom by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum umidity limit at the bottom by -{_allarm}%" });
                 }
                 else if (AllertParameters[i].Measurement.UmidityBottom < AllertParameters[i].Limit.Umidity * (100 - _allarm) / 100)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the bottom by -{_allarm}%" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum umidity limit at the bottom by -{_allarm}%" });
                 }
 
 
@@ -184,17 +184,17 @@ namespace HollowMindsDev.BackEnd.Services.Services.Allert
 
                 if (broken)
                 {
-                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} some sensors are broken" });
+                    AllertOutput.Add(new AllertModel { Type = "ALLARM", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} some sensors are broken" });
                 }
                 else
                 {
                     if (count >= AllertParameters[i].Limit.LevelMax)
                     {
-                        AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum level limit by {(count + 1) - AllertParameters[i].Limit.LevelMax} levels" });
+                        AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the maximum level limit by {(count + 1) - AllertParameters[i].Limit.LevelMax} levels" });
                     }
                     if (count < AllertParameters[i].Limit.LevelMin)
                     {
-                        AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $": silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum level limit by {AllertParameters[i].Limit.LevelMin - count} levels" });
+                        AllertOutput.Add(new AllertModel { Type = "WARNING", Body = $" silo n° {AllertParameters[i].Measurement.IdSilo} exceeded the minimum level limit by {AllertParameters[i].Limit.LevelMin - count} levels" });
                     }
                 }
                 

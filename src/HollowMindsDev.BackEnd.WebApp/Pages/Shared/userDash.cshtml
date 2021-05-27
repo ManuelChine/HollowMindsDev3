@@ -44,6 +44,25 @@
             </div>
         </div>
 
+
+        @for (int i = 0; i < Model.Allert.Count; i++)
+        {
+            if (Model.Allert[i].Type == "ALLARM")
+            {
+                <div class="alert alert-danger" role="alert">
+                    <h6>@Model.Allert[i].Type</h6>
+                    <p>@Model.Allert[i].Body </p>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning" role="alert">
+                    <h6>@Model.Allert[i].Type</h6>
+                    <p>@Model.Allert[i].Body </p>
+                </div>
+            }
+        }
+
         <div class="row" style="color:white">
             <div class="col-sm">
                 <h3><a style="color:#FFFFFF;text-decoration:none;" href="@Url.Page("Dash1")" target="_blank">Silos 1</a></h3>
@@ -286,7 +305,7 @@
                             }
                         }
                         </script>
-                    </div>                 
+                    </div>
                 </div>
             </div>
         </div>
